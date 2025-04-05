@@ -1,0 +1,55 @@
+create folder client and server
+create django project djangoapi in server
+
+django-admin startproject djangoapi
+py manage.py startapp api 
+pip install django djangorestframework
+pip install django-cors-headers
+in setting.py file
+    'api', 
+    'rest_framework',
+    'corsheaders',
+in midelware
+    'corsheaders.middleware.CorsMiddleware', 
+
+
+in last of setting file
+
+CORS_ALLOW_ALL_ORIGINS=True 
+or 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",  # React frontend URL
+]
+------------------------------
+create Model in models.py file
+
+py manage.py makemigrations //create model 
+py manage.py migrate // create table in database
+-------------
+serializer.py for json_data into py data
+
+
+
+---------------------------
+create client--
+create react project in client
+npm uninstall -g create-react-app
+npx create-react-app app 
+cd app 
+npm install axios react-router-dom
+npm install react-bootstrap bootstrap 
+npm install react-bootstrap table 
+npm i react-toastify
+in app.js
+import { ToastContainer, toast } from 'react-toastify';
+
+<ToastContainer />
+toast.error("Email or phone already Exist !")
+toast.success(" Data Deleted successfully  !");
+
+
+in src/index.js file ->
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
+
+npm start
